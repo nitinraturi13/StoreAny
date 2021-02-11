@@ -17,11 +17,9 @@ namespace StoreAny.Controllers
             return View(result);
         }
 
-
         [HttpPost]
         public ActionResult Index(CustomerModel cust)
-        {
-            
+        {            
             var result = DapperORM.ReturnList<CustomerModel>("CustomerViewById");
             return View(result);
         }
@@ -46,8 +44,7 @@ namespace StoreAny.Controllers
 
         [HttpGet]
         public ActionResult Edit(int id)
-        {
-            
+        {            
             DynamicParameters param = new DynamicParameters();
             param.Add("@Id", id);
             var result=View(DapperORM.ReturnList<CustomerModel>("CustomerViewById", param).FirstOrDefault<CustomerModel>());
@@ -56,8 +53,7 @@ namespace StoreAny.Controllers
 
         [HttpPost]
         public ActionResult Edit(CustomerModel cust)
-        {
-            
+        {            
             DynamicParameters param = new DynamicParameters();
             param.Add("@Id", cust.Id);
             param.Add("@Name", cust.Name);

@@ -9,8 +9,7 @@ using System.Web;
 namespace StoreAny.Models
 {
     public static class DapperORM
-    {
-        
+    {        
         public static string connectionString = @"server=(local)\SQLEXPRESS;database=store;Integrated Security=True;";
 
         public static void ExecutewithoutReturn(String procedureName, DynamicParameters param = null)

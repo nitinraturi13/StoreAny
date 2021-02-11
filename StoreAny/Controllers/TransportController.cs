@@ -8,20 +8,17 @@ using StoreAny.Models;
 
 namespace StoreAny.Controllers
 {
-
     public class TransportController : Controller
     {
         [HttpGet]
         public ActionResult Index()
-        {
-           
+        {     
             var result = DapperORM.ReturnList<TransportInfoModel>("Transport_infoViewAll");
             return View(result);
         }
         [HttpPost]
         public ActionResult Index(TransportInfoModel trans)
-        {
-           
+        {           
             var result = DapperORM.ReturnList<TransportInfoModel>("Transport_infoViewById");
             return View(result);
         }
@@ -43,7 +40,6 @@ namespace StoreAny.Controllers
             DapperORM.ExecutewithoutReturn("Transport_infoAdd", param);
             return RedirectToAction("Index");
         }
-
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -52,7 +48,6 @@ namespace StoreAny.Controllers
             var result = View(DapperORM.ReturnList<TransportInfoModel>("Transport_infoViewById", param).FirstOrDefault<TransportInfoModel>());
             return (result);
         }
-
         [HttpPost]
         public ActionResult Edit(TransportInfoModel trans)
         {            

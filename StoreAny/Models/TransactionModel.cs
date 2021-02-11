@@ -7,25 +7,19 @@ namespace StoreAny.Models
 {
     public class TransactionModel
     {
-        public List<int> CustomerId { get; set; }
-        public List<string> CustomerName { get; set; }
-        public List<int> SupplierId { get; set; }
-        public List<int> supplierName { get; set; }
-        public object SupplierName { get; internal set; }
-        public List<int> MenuCode { get; set; }
-        public List<string> IteamName { get; set; }
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public int SupplierId { get; set; }
+        public string SupplierName { get; set; }
+        public int MenuCode { get; set; }
+        public string IteamName { get; set; }
         public int Quantity { get; set; }
         public TransactionType Type { get; set; }
-        public DefineType Define { get; set; }
     }
     public enum TransactionType
     {
         sell,
         purchase
     }
-    public enum DefineType
-    {
-        c,
-        s
-    }
+   
 }

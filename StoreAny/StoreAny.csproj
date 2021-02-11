@@ -218,11 +218,11 @@
     <Content Include="Views\ItemList\Edit.cshtml" />
     <Content Include="Views\ItemList\Index.cshtml" />
     <Content Include="Views\Inter_company_Party\Edit.cshtml" />
-    <Content Include="Views\Transport\Index.cshtml" />
     <Content Include="Views\Transport\Edit.cshtml" />
     <Content Include="Views\Transport\Add.cshtml" />
-    <Content Include="Views\Transaction\Index.cshtml" />
     <Content Include="Views\Transaction\Add.cshtml" />
+    <Content Include="Views\Transport\Index.cshtml" />
+    <Content Include="Views\Transaction\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

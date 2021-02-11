@@ -3,36 +3,35 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="jumbotron" style="background-color:aquamarine">
+<div class="jumbotron" style="background-color:lightblue">
     <h2>BPOS Patanjali</h2>
 
     <p>
-        @Html.ActionLink("Create Customer/Supplier", "Add", "Customer")   |
-        @Html.ActionLink("Create Inter_Company_Party", "Add", "Inter_Company_PArty")   |
-        @Html.ActionLink("Create ItemList", "Add", "ItemList")   |
-        @Html.ActionLink("Create Transport", "Add", "Transport") |
+        @Html.ActionLink("Customer/Supplier", "Add", "Customer")   |
+        @Html.ActionLink("Inter_Company_Party", "Add", "Inter_Company_PArty")   |
+        @Html.ActionLink("ItemList", "Add", "ItemList")   |
+        @Html.ActionLink("Transport", "Add", "Transport") |
         @Html.ActionLink("Transaction","Add","Transaction")
-
     </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SAPCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GSTNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.type)
-            </th>
-            <th></th>
-        </tr>
+    <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SAPCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GSTNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.type)
+                </th>
+                <th></th>
+            </tr>
 
         @foreach (var item in Model)
         {

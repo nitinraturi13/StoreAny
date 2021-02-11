@@ -11,16 +11,13 @@ namespace StoreAny.Controllers
     public class Inter_company_PartyController : Controller
     {        
         public ActionResult Index()
-        {
-           
+        {           
             var result = DapperORM.ReturnList<Inter_Company_PartyModel>("Inter_Company_PartyViewAll");
             return View(result);
         }
         [HttpPost]
         public ActionResult Index(Inter_Company_PartyModel inter)
-        {
-            
-
+        {         
             var result = DapperORM.ReturnList<Inter_Company_PartyModel>("Inter_company_PartyViewById");
             return View(result);
         }
@@ -31,8 +28,7 @@ namespace StoreAny.Controllers
         }
         [HttpPost]
         public ActionResult Add(Inter_Company_PartyModel inter)
-        {
-           
+        {           
             DynamicParameters param = new DynamicParameters();
             param.Add("@Name", inter.Name);
             param.Add("@SAPCode", inter.SAPCode);
@@ -43,8 +39,7 @@ namespace StoreAny.Controllers
 
         [HttpGet]
         public ActionResult Edit(int Id)
-        {
-            
+        {            
             DynamicParameters param = new DynamicParameters();
             param.Add("@Id", Id);
             var result =View(DapperORM.ReturnList<Inter_Company_PartyModel>("Inter_company_partyEdit", param).FirstOrDefault<Inter_Company_PartyModel>());
